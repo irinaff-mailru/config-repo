@@ -2,13 +2,15 @@
 server:
   port: 0 # Динамический порт для дева
 
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5433/relocation_db
-    username: dev_user
-    password: dev_password
-  liquibase:
-    enabled: true
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${random.uuid}
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
+    registry-fetch-interval-seconds: 5
 
 logging:
   level:
