@@ -1,0 +1,15 @@
+# Настройки dev для Relocation Service
+server:
+  port: 0 # Динамический порт для дева
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/relocation_db
+    username: dev_user
+    password: dev_password
+  liquibase:
+    enabled: true
+
+logging:
+  level:
+    root: info
