@@ -1,7 +1,4 @@
 # Базовые настройки для Relocation Service
-server:
-  port: 0
-
 spring:
   application:
     name: RELOCATION-SERVICE

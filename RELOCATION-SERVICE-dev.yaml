@@ -1,7 +1,4 @@
 # Настройки dev для Relocation Service
-server:
-  port: 0 # Динамический порт для дева
-
 eureka:
   instance:
     hostname: localhost
