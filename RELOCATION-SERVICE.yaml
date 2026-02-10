@@ -41,6 +41,7 @@ management:
       exposure:
         include:
           - health
+          - env
           - info
           - metrics
           - retry

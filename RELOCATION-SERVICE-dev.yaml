@@ -12,6 +12,19 @@ eureka:
       defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
     registry-fetch-interval-seconds: 5
 
+feign:
+  client:
+    config:
+      default: # Настройки для всех клиентов
+        logger-level: FULL
+
 logging:
   level:
     root: info
+    by.javaguru.jdmk15.relocationservice: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    feign: DEBUG
+    org.springframework.cloud.openfeign: DEBUG
+    io.github.resilience4j.retry: DEBUG
+    io.github.resilience4j.circuitbreaker: DEBUG
